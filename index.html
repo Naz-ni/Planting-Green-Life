@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planting Green Life | Vision & Execution Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Earthy Green & Warm Neutral -->
+    <!-- Application Structure Plan: The preferred modern Tailwind CSS design is the foundation. A comprehensive "Digital Execution Plan" section has been added, replacing the previous simple prototype. This new section is highly detailed, featuring high-fidelity visual mock-ups for every planned component of the website, from the design system to the contact form. This structure maintains the approved aesthetic while providing the detailed, professional prototype showcase the user requested. All content, including the co-founder, has been restored. -->
+    <!-- Visualization & Content Choices: 
+    - Execution Model -> Remains an interactive accordion for explaining the operational plan clearly.
+    - NEW Digital Execution Plan -> Goal: To visually prototype the entire future website with high fidelity and detail. -> Viz: A grid of detailed mock-up cards for each key feature (Design System, Hero, Volunteer Hub, Impact Dashboard, etc.). These cards use advanced styling (gradients, shadows, custom inputs, icons) to mimic a finished, professional product. -> Interaction: Progress bars are animated on scroll. Forms are for display only. Justification: This robustly addresses the user's core requirement for a high-quality, comprehensive showcase of the implementation plan, building credibility and clearly communicating the vision.
+    - Future Community Stories -> Remains unchanged to preserve the narrative flow.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FBFBF8;
+            color: #3d4a4a;
+        }
+        .step-item.active .step-content {
+            max-height: 500px;
+            opacity: 1;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+        .step-item.active .step-arrow {
+             transform: rotate(180deg);
+        }
+        .progress-bar-fill {
+            transition: width 1.5s ease-in-out;
+        }
+        .mock-hero-gradient {
+            background-image: linear-gradient(135deg, hsl(150, 100%, 20%), hsl(142, 76%, 36%), hsl(120, 60%, 45%));
+        }
+        .mock-btn-primary {
+             background: linear-gradient(135deg, hsl(142, 76%, 36%), hsl(120, 60%, 45%));
+             box-shadow: 0 4px 20px -4px hsl(142, 76%, 36%, 0.4);
+        }
+        .mock-btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px -8px hsl(150, 100%, 20%, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-stone-50 text-stone-800">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-green-800">🌳 Planting Green Life</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#mission" class="text-stone-600 hover:text-green-700 transition-colors">Our Mission</a>
+                <a href="#plan" class="text-stone-600 hover:text-green-700 transition-colors">Execution Plan</a>
+                <a href="#stories" class="text-stone-600 hover:text-green-700 transition-colors">Vision</a>
+                <a href="#join" class="bg-green-600 text-white px-4 py-2 rounded-full hover:bg-green-700 transition-transform hover:scale-105">Join Us</a>
+            </div>
+             <button id="mobile-menu-button" class="md:hidden text-stone-600">
+                <span class="text-2xl">☰</span>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white px-6 pb-4">
+             <a href="#mission" class="block py-2 text-stone-600 hover:text-green-700">Our Mission</a>
+             <a href="#plan" class="block py-2 text-stone-600 hover:text-green-700">Execution Plan</a>
+             <a href="#stories" class="block py-2 text-stone-600 hover:text-green-700">Vision</a>
+             <a href="#join" class="block mt-2 bg-green-600 text-white text-center px-4 py-2 rounded-full hover:bg-green-700">Join Us</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative h-[80vh] min-h-[500px] flex items-center text-center text-white bg-green-800">
+             <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=2560&auto=format&fit=crop');"></div>
+            <div class="relative container mx-auto px-6 z-10">
+                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">Every Seed, A Story of Life.</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-green-100">This is the vision for Planting Green Life. We are building a community-driven initiative to create a greener, healthier, and more sustainable Bangladesh.</p>
+                <a href="#join" class="bg-white text-green-800 font-bold px-8 py-4 rounded-full text-lg hover:bg-green-100 transition-transform hover:scale-105">Join the Movement</a>
+            </div>
+        </section>
+
+        <section id="mission" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Mission in Action</h2>
+                    <p class="mt-4 text-lg text-stone-600 max-w-2xl mx-auto">Our work will be guided by four core objectives to ensure we make a lasting, positive impact on Bangladesh's environment and its communities.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-4xl mb-4 text-green-600">🌳</div>
+                        <h3 class="text-xl font-semibold mb-2">Tree Plantation Across Districts</h3>
+                        <p class="text-stone-600">We will launch targeted plantation drives to expand green cover and restore local ecosystems.</p>
+                    </div>
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                         <div class="text-4xl mb-4 text-green-600">👥</div>
+                        <h3 class="text-xl font-semibold mb-2">Empowering Volunteers & Donors</h3>
+                        <p class="text-stone-600">We will build a community of environmental leaders by fostering teamwork and responsibility.</p>
+                    </div>
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                         <div class="text-4xl mb-4 text-green-600">📸</div>
+                        <h3 class="text-xl font-semibold mb-2">Transparent Impact Stories</h3>
+                        <p class="text-stone-600">We will share real stories of our work, ensuring every contribution is seen and celebrated.</p>
+                    </div>
+                    <div class="bg-stone-50 p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow">
+                        <div class="text-4xl mb-4 text-green-600">🌱</div>
+                        <h3 class="text-xl font-semibold mb-2">Sustainable Green Future</h3>
+                        <p class="text-stone-600">We will ensure the long-term survival of trees through community care and monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how" class="py-20 bg-stone-100">
+             <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Execution Model</h2>
+                    <p class="mt-4 text-lg text-stone-600 max-w-2xl mx-auto">Our model is designed for transparency, local empowerment, and sustainable growth. This is how we plan to turn your support into thriving green spaces.</p>
+                </div>
+                <div class="max-w-3xl mx-auto space-y-4" id="execution-model">
+                </div>
+             </div>
+        </section>
+
+        <!-- NEW & IMPROVED Execution Plan Section -->
+        <section id="plan" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">Our Digital Execution Plan</h2>
+                    <p class="mt-4 text-lg text-stone-600 max-w-3xl mx-auto">To bring our community together, we are designing a modern, interactive website. Below is a high-fidelity prototype showcasing what the key features will look like. This platform will be our digital hub for action and transparency.</p>
+                </div>
+                
+                <div class="bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 p-4 rounded-lg mb-12 max-w-4xl mx-auto shadow-sm">
+                    <p><strong>Please Note:</strong> This is a visual prototype to demonstrate our plan. The features below are not yet functional but represent our vision for the final website.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Column 1 -->
+                    <div class="space-y-8">
+                        <!-- Design System -->
+                        <div class="p-6 rounded-xl border border-stone-200 shadow-lg bg-stone-50 transition-all hover:shadow-2xl hover:-translate-y-1">
+                            <h3 class="text-xl font-bold text-center text-green-700 mb-4">🎨 Design System & Theme</h3>
+                            <p class="text-center text-sm text-stone-600 mb-4">A nature-inspired design with a clean, modern aesthetic.</p>
+                            <div class="flex justify-center gap-2">
+                                <div class="w-10 h-10 rounded-full" style="background-color: hsl(150, 100%, 20%);" title="Forest Green"></div>
+                                <div class="w-10 h-10 rounded-full" style="background-color: hsl(142, 76%, 36%);" title="Primary Green"></div>
+                                <div class="w-10 h-10 rounded-full" style="background-color: hsl(120, 60%, 45%);" title="Leaf Green"></div>
+                                <div class="w-10 h-10 rounded-full" style="background-color: hsl(30, 30%, 40%);" title="Earth Brown"></div>
+                                <div class="w-10 h-10 rounded-full" style="background-color: hsl(60, 4.8%, 95.9%);" title="Muted"></div>
+                            </div>
+                        </div>
+
+                        <!-- Hero Section -->
+                        <div class="p-6 rounded-xl border border-stone-200 shadow-lg bg-stone-50 transition-all hover:shadow-2xl hover:-translate-y-1">
+                             <h3 class="text-xl font-bold text-center text-green-700 mb-4">🌟 Hero Section</h3>
+                             <div class="mock-hero-gradient p-6 rounded-lg text-white text-center shadow-2xl">
+                                <h4 class="text-2xl font-bold">🌳 Planting Green Life</h4>
+                                <p class="text-md mt-1 opacity-90">From Seeds to Trees | Greening Lives</p>
+                                <div class="mt-4 flex justify-center gap-3">
+                                    <button class="mock-btn-primary text-white font-semibold py-2 px-4 rounded-full text-sm transition-transform">🌱 Join as Volunteer</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- About & Founders -->
+                        <div class="p-6 rounded-xl border border-stone-200 shadow-lg bg-stone-50 transition-all hover:shadow-2xl hover:-translate-y-1">
+                            <h3 class="text-xl font-bold text-center text-green-700 mb-4">👥 About & Founders</h3>
+                             <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white p-4 rounded-lg shadow-md border text-center">
+                                    <div class="w-16 h-16 rounded-full mx-auto mb-2 bg-gradient-to-br from-green-300 to-green-500 flex items-center justify-center text-3xl">👩</div>
+                                    <h4 class="text-md font-bold text-stone-800">Hafsa A. Nishat</h4>
+                                    <p class="text-green-600 font-semibold text-xs">Founder</p>
+                                </div>
+                                 <div class="bg-white p-4 rounded-lg shadow-md border text-center">
+                                     <div class="w-16 h-16 rounded-full mx-auto mb-2 bg-gradient-to-br from-green-300 to-green-500 flex items-center justify-center text-3xl">👨</div>
+                                    <h4 class="text-md font-bold text-stone-800">Nazmul Islam</h4>
+                                    <p class="text-green-600 font-semibold text-xs">Co-founder</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Column 2 -->
+                    <div class="space-y-8">
+                        <!-- Volunteer Hub -->
+                         <div class="p-6 rounded-xl border border-stone-200 shadow-lg bg-stone-50 transition-all hover:shadow-2xl hover:-translate-y-1">
+                            <h3 class="text-xl font-bold text-center text-green-700 mb-4">🤝 Volunteer Hub</h3>
+                            <div class="bg-white p-4 rounded-lg shadow-md border">
+                                <h4 class="text-lg font-semibold mb-3 text-center text-stone-700">Volunteer Registration</h4>
+                                <div class="space-y-3">
+                                    <div>
+                                        <label class="block text-xs font-medium text-stone-600">Full Name</label>
+                                        <input type="text" placeholder="Hafsa Ahmed Nishat" class="mt-1 block w-full text-sm bg-white border border-stone-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-medium text-stone-600">Why do you want to volunteer?</label>
+                                        <textarea rows="2" placeholder="Tell us your motivation..." class="mt-1 block w-full text-sm bg-white border border-stone-300 rounded-md shadow-sm py-2 px-3 focus:outline-none focus:ring-green-500 focus:border-green-500"></textarea>
+                                    </div>
+                                    <button class="w-full font-semibold py-2 px-4 rounded-lg transition-transform text-white text-sm mock-btn-primary">Join the Movement</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Impact Dashboard -->
+                        <div class="p-6 rounded-xl border border-stone-200 shadow-lg bg-stone-50 transition-all hover:shadow-2xl hover:-translate-y-1">
+                            <h3 class="text-xl font-bold text-center text-green-700 mb-4">📊 Impact Dashboard</h3>
+                            <div class="bg-white p-4 rounded-lg shadow-md border">
+                                <h4 class="text-lg font-semibold mb-4 text-center text-stone-700">Live Impact Metrics</h4>
+                                <div class="space-y-4">
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm font-medium text-green-700">🌳 Trees Planted</span>
+                                            <span class="text-xs font-medium text-green-700">Goal: 5,000+</span>
+                                        </div>
+                                        <div class="w-full bg-stone-200 rounded-full h-3">
+                                            <div class="h-3 rounded-full progress-bar-fill" style="width: 0%; background: linear-gradient(to right, #65a30d, #22c55e);" data-width="75%"></div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between mb-1">
+                                            <span class="text-sm font-medium text-green-700">👥 Active Volunteers</span>
+                                            <span class="text-xs font-medium text-green-700">Goal: 500+</span>
+                                        </div>
+                                        <div class="w-full bg-stone-200 rounded-full h-3">
+                                            <div class="h-3 rounded-full progress-bar-fill" style="width: 0%; background: linear-gradient(to right, #65a30d, #22c55e);" data-width="60%"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="stories" class="py-20 bg-stone-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-green-800">What Our Future Community Will Say</h2>
+                    <p class="mt-4 text-lg text-stone-600 max-w-2xl mx-auto">We envision a future where our volunteers and donors share stories of hope and impact. This is the community we are building together.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <p class="text-stone-600 italic mb-4">"Being part of Planting Green Life will be an amazing experience. Seeing the saplings we plant grow will give me so much hope for our country's future. It's more than just planting trees; it's about building a community."</p>
+                        <p class="font-semibold text-green-700">- Future Volunteer from Dhaka</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <p class="text-stone-600 italic mb-4">"As a donor, transparency will be very important to me. The impact dashboard and regular updates will show me exactly how my contribution is making a difference. I will be proud to support this initiative."</p>
+                        <p class="font-semibold text-green-700">- Future Donor from Chittagong</p>
+                    </div>
+                     <div class="bg-white p-8 rounded-xl shadow-sm">
+                        <p class="text-stone-600 italic mb-4">"I plan to join a plantation drive with my university friends. It will be a fun day out, and we will learn so much about our local environment. I can't wait for the first event and will encourage everyone to join!"</p>
+                        <p class="font-semibold text-green-700">- Future Student Volunteer from Rajshahi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="join" class="py-20 bg-green-700 text-white">
+            <div class="container mx-auto px-6 text-center">
+                 <h2 class="text-3xl md:text-4xl font-bold">Help Us Build This Future</h2>
+                <p class="mt-4 text-lg text-green-100 max-w-2xl mx-auto mb-10">You have the power to help us turn this plan into reality. Join us in our mission to grow a greener Bangladesh, one seed at a time.</p>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <button class="bg-white text-green-800 font-bold px-8 py-4 rounded-full text-lg hover:bg-green-100 transition-transform hover:scale-105">🌱 Register Your Interest</button>
+                    <button class="border-2 border-white text-white font-bold px-8 py-4 rounded-full text-lg hover:bg-white hover:text-green-800 transition-colors">💚 Pledge Your Support</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-stone-800 text-stone-300 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-2xl font-bold text-white mb-2">🌳 Planting Green Life</p>
+            <p>"Nurturing Nature, Growing Tomorrow."</p>
+            <div class="mt-4 text-sm text-stone-400">
+                <p>#PlantingGreenLife #EverySeedAStoryOfLife #GreenBangladesh</p>
+            </div>
+            <div class="mt-6 border-t border-stone-700 pt-6 text-stone-500 text-sm">
+                <p>&copy; 2025 Planting Green Life. A community for a greener future.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Execution Model Accordion
+            const executionSteps = [
+                { title: 'Fund Collection', content: 'We will gather donations both online and offline, maintaining complete transparency in how every taka is used to support our green mission.' },
+                { title: 'Pilot District Selection', content: 'We will strategically select 2-3 districts for our initial drives, building strong and trusted partnerships with local community leaders.' },
+                { title: 'Local Execution', content: 'Funds will be allocated to our local partners who purchase saplings, identify plantation spots, and organize community events. Every activity will be documented.' },
+                { title: 'Branding & Publishing', content: 'All event content, including photos and videos, will be published on our official page to share our collective success and maintain transparency.' },
+                { title: 'Recognition & Engagement', content: 'We will provide Certificates of Participation to our dedicated volunteers and donors, formally recognizing their invaluable contributions.' },
+                { title: 'Future Expansion', content: 'We will repeat events in existing districts for sustainable growth and use our impact stories to attract new supporters for expansion into new areas.' }
+            ];
+
+            const executionContainer = document.getElementById('execution-model');
+            if (executionContainer) {
+                executionContainer.innerHTML = executionSteps.map((step, index) => `
+                    <div class="step-item bg-white rounded-lg shadow-sm border border-stone-200 overflow-hidden">
+                        <button class="step-header w-full flex justify-between items-center p-4 text-left">
+                            <span class="text-lg font-semibold"><span class="text-green-600">${index + 1}.</span> ${step.title}</span>
+                            <span class="step-arrow text-2xl text-green-600 transform transition-transform duration-300">▾</span>
+                        </button>
+                        <div class="step-content px-4 text-stone-600 max-h-0 opacity-0 transition-all duration-500 ease-in-out">
+                            ${step.content}
+                        </div>
+                    </div>
+                `).join('');
+
+                const stepItems = document.querySelectorAll('.step-item');
+                stepItems.forEach(item => {
+                    const header = item.querySelector('.step-header');
+                    header.addEventListener('click', () => {
+                        const currentlyActive = document.querySelector('.step-item.active');
+                        if (currentlyActive && currentlyActive !== item) {
+                            currentlyActive.classList.remove('active');
+                        }
+                        item.classList.toggle('active');
+                    });
+                });
+            }
+
+            // Animate progress bars on scroll
+            const progressObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const progressBar = entry.target;
+                        setTimeout(() => {
+                           const targetWidth = progressBar.getAttribute('data-width');
+                           progressBar.style.width = targetWidth;
+                        }, 200);
+                        progressObserver.unobserve(progressBar);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            document.querySelectorAll('.progress-bar-fill').forEach(bar => {
+                progressObserver.observe(bar);
+            });
+        });
+    </script>
+</body>
+</html>
